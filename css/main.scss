@@ -1,0 +1,114 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 2.5rem;
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+}
+h2{
+    font-size: 8rem;
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+}
+h3{
+    font-size: 3.5rem;
+}
+h4{
+    font-size: 3rem;
+}
+p{
+    font-size: 2.5rem;
+}
+li{
+    font-size: 2rem;
+}
+a{
+    color: #ffff;
+    text-decoration: none;
+}
+@import "home";
+@import "features";
+@import "soon";
+@import "footer";
+
+@media screen and (max-width:1200px){
+    html{
+        font-size: 40%;
+    }
+    nav{
+        #logo{
+            flex: 1;
+        }
+        ul{
+            li{
+                margin-left: 5rem;
+            }
+        }
+    }
+    .showcase{
+        grid-template-columns: 10% 1fr 10%;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+        img,
+        h2,
+        .info {
+            grid-column: 2/3;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:627px){
+    .showcase{
+        img{
+            margin-left: 30%;
+            height: 30%!important;
+            grid-column: 2/4!important;
+        }
+    }
+    .features-container{
+        .features{
+            h2{text-align: center;}
+            .cards{
+                display: flex;
+                flex-direction: column;
+
+                .card{
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+    .soon{
+        img {
+           width: 100%;
+        }
+        .circle {
+            width: 80%;
+            z-index: -0;
+        }
+        h2 {
+            top: 25%;
+            z-index: 1;
+        }
+    }
+    footer{
+        h1{
+            flex: 1;
+        }
+    }
+}
